@@ -29,7 +29,13 @@ gem "rails-i18n", "~> 6.0"
 
 # =============== 各種環境用のgem
 # ----- 開発環境
+group :production do
+  # PostgreSQL
+  gem "pg"
+end
+# ----- 開発環境
 group :development do
+  gem "sqlite3"
   gem "web-console", ">= 3.3.0"
   gem "listen", "~> 3.2"
   gem "spring"
