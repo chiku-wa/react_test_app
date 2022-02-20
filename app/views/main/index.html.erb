@@ -1,6 +1,10 @@
 <h1>Reactテスト</h1>
 <p>Reactの呼び出しテスト</p>
-<hr>
+
+<%#
+  Reactの公式サイトの項番を基準にサンプルコードを出力。
+%>
+<h1 class="bg-info text-white">JSXの導入</h1>
 <%# ReactのJSX処理呼び出し %>
 <%= javascript_pack_tag 'hello_react' %>
 
@@ -9,3 +13,11 @@
   <%# ここの要素にReactで値を埋め込む %>
 </div>
 <% end %>
+
+<h1 class="bg-info text-white">要素のレンダー</h1>
+<h2>レンダーされた要素の更新</h2>
+<%# ReactのJSX処理呼び出し %>
+<%= javascript_pack_tag 'tick_test' %>
+<div id="tick_test">
+  <%# ここの要素にReactで値を埋め込む %>
+</div>

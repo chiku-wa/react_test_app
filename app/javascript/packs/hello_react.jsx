@@ -34,7 +34,7 @@ function getGreeting(uer) {
     userName = formatName(user);
   }
 
-  return <h1>こんにちは、{userName}さん</h1>;
+  return <h2>こんにちは、{userName}さん</h2>;
 }
 
 
@@ -53,20 +53,20 @@ const element1 = getGreeting(user);
 // ----- 同一処理でも、Reactには複数が存在する
 // 1. 直接タグ要素を代入する
 const element2 = (
-  <h1 className="greeting">
+  <h2 className="greeting">
     直接タグを代入
-  </h1>
+  </h2>
 );
 // 2. `React.createElement`メソッドを用いる
 const element3 = React.createElement(
-  'h1',
+  'h2',
   { className: 'greeting' }
   , 'React.createElementメソッドを使って文字列を代入'
 );
 
 // 3. `{}`を用いた記法で、厳密に引数を指定する
 const element4 = {
-  type: 'h1',
+  type: 'h2',
   props: {
     className: 'greeting',
     children: '{}を使って厳密に引数を指定',
